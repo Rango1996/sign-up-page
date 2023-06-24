@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'Norse-bold';
+    src: url('../sign-up-page/fonts/Norse-Bold.otf');
+}
+
+body {
+    border: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+}
+
+.left-side {
+    width: 40%;
+    height:auto;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.left-side img {
+    width: 100%;
+    height: 100%;
+}
+
+.left-side .logo {
+    position: absolute;
+    top: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.6);
+    padding: 0;
+    margin: 0;
+    width:100%;
+    padding: 10px 0px;
+}
+
+.left-side .logo img {
+    width: 15%;
+    height: 15%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.left-side .logo h1 {
+    font-family: 'Norse-bold';
+    color: white;
+    margin: 0;
+    font-size: 7rem;
+}
+
+.right-side {
+    width:70%;
+    background-color: #f1efef;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+    padding-left:2em;
+}
+
+.right-side .text-right-side {
+    font-size: 2em;
+}
+
+
+.right-side .form-class {
+    background-color: white;
+    background-color: white;
+    width: 100%;
+    margin-left: -2em; 
+    padding-left: 2em; 
+}
