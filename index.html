@@ -21,28 +21,66 @@
             </div>
             <div class="form-class">
                 <form action="submit-form.php" method="POST">
-                    <label for="first-name">First Name:</label>
-                    <input type="text" id="first-name" name="first-name" required>
-            
-                    <label for="last-name">Last Name:</label>
-                    <input type="text" id="last-name" name="last-name" required>
-            
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-            
-                    <label for="phone">Phone Number:</label>
-                    <input type="tel" id="phone" name="phone" required>
-            
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" required>
-            
-                    <label for="confirm-password">Confirm Password:</label>
-                    <input type="password" id="confirm-password" name="confirm-password" required>
-            
-                    <input type="submit" value="Submit">
-                </form>
-            </div>
-        </div>
+                  <div class="form-row">
+                    <div class="form-field">
+                      <label for="first-name">FIRST NAME:</label>
+                      <input type="text" id="first-name" name="first-name" required>
+                    </div>
+                    <div class="form-field">
+                      <label for="last-name">LAST NAME:</label>
+                      <input type="text" id="last-name" name="last-name" required>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-field">
+                      <label for="email">EMAIL:</label>
+                      <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-field">
+                      <label for="phone">PHONE NUMBER:</label>
+                      <input type="tel" id="phone" name="phone" required>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-field">
+                      <label for="password">PASSWORD:</label>
+                      <input type="password" id="password" name="password" required>
+                      <small class="password-error">*Passwords do not match</small>
+                    </div>
+                    <div class="form-field">
+                      <label for="confirm-password">CONFIRM PASSWORD:</label>
+                      <input type="password" id="confirm-password" name="confirm-password" required>
+                    </div>
+                  </div>                  
+                </div> 
+                  <input type="submit" value="Create Account">
+                </form>             
     </main>
 </body>
+<script>
+const passwordInput = document.getElementById('password');
+const confirmPasswordInput = document.getElementById('confirm-password');
+const passwordField = document.querySelector('.form-row:nth-child(3) .form-field:nth-child(1)');
+const confirmPasswordField = document.querySelector('.form-row:nth-child(3) .form-field:nth-child(2)');
+const passwordError = document.querySelector('.password-error');
+
+confirmPasswordInput.addEventListener('input', validatePasswords);
+
+function validatePasswords() {
+  const password = passwordInput.value;
+  const confirmPassword = confirmPasswordInput.value;
+
+  if (password !== confirmPassword) {
+    passwordField.classList.add('password-mismatch');
+    confirmPasswordField.classList.add('password-mismatch');
+    passwordError.style.display = 'block';
+  } else {
+    passwordField.classList.remove('password-mismatch');
+    confirmPasswordField.classList.remove('password-mismatch');
+    passwordError.style.display = 'none';
+  }
+}
+
+
+</script>
 </html>

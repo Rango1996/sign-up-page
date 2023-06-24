@@ -67,18 +67,87 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items:flex-start;
-    padding-left:2em;
+    overflow: hidden;
+    padding:0;
+    margin: 0;
 }
 
 .right-side .text-right-side {
-    font-size: 2em;
+    font-size: 2rem;
+    padding: 2em 2em 2em 1em;
 }
 
-
-.right-side .form-class {
+.form-class {
     background-color: white;
-    background-color: white;
+    padding: 2em 2em 2em 1em;
     width: 100%;
-    margin-left: -2em; 
-    padding-left: 2em; 
-}
+  }
+
+  .form-class form {
+    width: 50%
+  }
+  
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2em;
+  }
+  
+  .form-field {
+    width: 40%;
+  }
+
+  .form-field input {
+    width: 40%;
+    border: 1px solid #8b8989;
+    height: 2em; 
+    border-radius: 5px;
+  }
+  
+  .form-field label {
+    display: block;
+    font-size: 1em;
+    color: #595656;
+    font-weight:500;
+  }
+  
+  .form-field input {
+    width: 100%;
+    border: 1px solid #8b8989;
+    height: 2em;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-field input:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 3px rgba(74, 144, 226, 0.5);
+  }
+
+  input[type="submit"] {
+    background-color: green; 
+    width: 10vw; 
+    padding: 1rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    color: white;
+    border: 1px solid black;
+    cursor: pointer; 
+    border-radius: 10px;
+    font-size: 1.3em;
+    font-weight: bold;
+  }
+  
+  .form-field.password-mismatch input {
+    border-color: red;
+  }
+
+  .password-error {
+    color: red;
+    display: none;
+    font-size: 0.8em;
+    margin-top: 0.5em;
+  }
+  
+  
